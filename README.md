@@ -63,8 +63,8 @@ docker-compose up -d kong
 
 **Now Kong is running**
 
-- Kong Admin API http://127.0.0.1:8001
-- Kong Proxy http://127.0.0.1
+- Kong Admin API http://0.0.0.0:8001
+- Kong Proxy http://0.0.0.0
 
 ### Start Konga
 
@@ -74,14 +74,14 @@ docker-compose up -d konga
 
 **Now Konga is running**
 
-- Konga http://127.0.0.1:1337
+- Konga http://0.0.0.0:1337
 
 ### Acccess Konga securely
 
 If you deploy Kong on a remote host we can access Konga via ssh tunnel
 
 ```
-ssh -L 1337:127.0.0.1:1337 username@kong.example.com
+ssh -L 1337:0.0.0.0:1337 username@kong.example.com
 ```
 
 Now you can access konga on [localhost](http://localhost:1337)
